@@ -1,0 +1,89 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K11:13:37 AM [express] serving on port 5000
+11:13:48 AM [express] GET /api/announcements 304 in 11ms :: [{"id":3,"title":"Annual General Meeting 2026","content":"The upcoming AGM will be held next month to discuss the future digital transformation of the Exchange.","date":"2026-03-05T06:52:16.125Z"},{"id":2,"title":"Benchmark Prices Updated","content":"Latest benchmark prices for Copper and Zinc have been released and circulated to members.","date":"2026-03-05T06:52:16.121Z"},{"id":1,"title":"New BME App Launched","content":"Stay updated on the go with our new BME app available for iOS and Android.","date":"2026-03-05T06:52:16.117Z"}]
+11:13:48 AM [express] GET /api/announcements 304 in 1ms :: [{"id":3,"title":"Annual General Meeting 2026","content":"The upcoming AGM will be held next month to discuss the future digital transformation of the Exchange.","date":"2026-03-05T06:52:16.125Z"},{"id":2,"title":"Benchmark Prices Updated","content":"Latest benchmark prices for Copper and Zinc have been released and circulated to members.","date":"2026-03-05T06:52:16.121Z"},{"id":1,"title":"New BME App Launched","content":"Stay updated on the go with our new BME app available for iOS and Android.","date":"2026-03-05T06:52:16.117Z"}]
+11:14:38 AM [express] GET /api/announcements 304 in 11ms :: [{"id":3,"title":"Annual General Meeting 2026","content":"The upcoming AGM will be held next month to discuss the future digital transformation of the Exchange.","date":"2026-03-05T06:52:16.125Z"},{"id":2,"title":"Benchmark Prices Updated","content":"Latest benchmark prices for Copper and Zinc have been released and circulated to members.","date":"2026-03-05T06:52:16.121Z"},{"id":1,"title":"New BME App Launched","content":"Stay updated on the go with our new BME app available for iOS and Android.","date":"2026-03-05T06:52:16.117Z"}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m11:15:58 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Conclave2026.tsx, /src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m11:16:17 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m11:16:17 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Membership.tsx, /src/index.css[22m

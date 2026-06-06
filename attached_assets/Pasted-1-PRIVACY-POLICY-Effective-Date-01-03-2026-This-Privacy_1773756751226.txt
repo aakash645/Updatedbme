@@ -1,0 +1,59 @@
+1. PRIVACY POLICY
+Effective Date: 01/03/2026
+This Privacy Policy (“Policy”) governs the manner in which Bombay Metal Exchange (“BME”) collects, uses, processes, stores, and discloses information collected from users, members, sponsors, exhibitors, and event participants.
+1.1 Scope
+This Policy applies to all users of BME’s website, mobile application, membership systems, and event platforms including BME Conclave 2026.
+1.2 Information Collected
+BME may collect personal information (name, contact details), business information (company name, GST, product categories), transactional data (payments, invoices), and technical data (IP address, device, cookies).
+1.3 Lawful Basis
+Data is processed for contractual necessity, legal compliance, legitimate business interests, and user consent where applicable.
+1.4 Usage of Information
+Information is used for member management, event execution, stall allocation, sponsorship visibility, communication, analytics, and compliance.
+1.5 Data Sharing
+BME may share information with service providers, event partners, payment gateways (including Razorpay), and authorities where legally required.
+1.6 Media and Publicity Rights
+By participating in events, users grant BME irrevocable rights to capture and use their name, likeness, company identity, and branding for promotional purposes without compensation.
+1.7 Data Retention
+BME retains data only as long as necessary for operational, legal, and compliance purposes.
+1.8 Security Disclaimer
+While BME implements reasonable safeguards, it shall not be liable for unauthorized access beyond its control.
+1.9 User Rights
+Users may request access, correction, or deletion of personal data by written request to BME.
+2. TERMS AND CONDITIONS
+2.1 Binding Agreement
+By accessing BME platforms or participating in events, users agree to be legally bound by these Terms.
+2.2 Membership Terms
+Membership approval is at BME’s sole discretion. Misrepresentation or misconduct may result in suspension or termination without refund.
+2.3 Event Participation
+Participants must comply with all event guidelines, venue rules, and applicable laws. BME reserves the right to deny access.
+2.4 Stall and Sponsorship Terms
+Stall allocation, branding, and benefits are subject to availability and BME discretion. No guarantees of business outcomes or leads are provided.
+2.5 Payment Terms
+All payments must be completed prior to confirmation. Applicable taxes including GST shall be borne by the participant.
+2.6 Razorpay Payment Clause
+Payments are facilitated via Razorpay. Users agree to Razorpay’s terms. BME shall not be liable for failed, delayed, or unauthorized transactions due to gateway or banking issues.
+2.7 Limitation of Liability
+BME shall not be liable for indirect, incidental, consequential, or business losses arising from use of services or participation in events.
+2.8 Indemnity
+Users agree to indemnify and hold harmless BME from any claims, damages, or liabilities arising from their actions or participation.
+2.9 Force Majeure
+BME shall not be liable for failure or delay caused by events beyond its control including natural disasters, government restrictions, or pandemics.
+2.10 Jurisdiction
+All disputes shall be subject to the exclusive jurisdiction of courts in Mumbai, India.
+3. REFUND POLICY
+All payments made to BME are strictly non-refundable except under exceptional circumstances determined solely by BME.
+3.1 Event Fees
+Delegate passes, stall bookings, and sponsorship fees are non-refundable once confirmed.
+3.2 Exceptions
+Refunds may be granted for duplicate transactions, technical errors, or event cancellation by BME.
+3.3 Refund Processing
+Approved refunds shall be processed within 15–30 working days via the original payment method.
+4. CANCELLATION POLICY
+4.1 Participant Cancellation
+Participants may cancel participation; however, no refunds shall be provided. Substitutions may be permitted at BME’s discretion.
+4.2 BME Rights
+BME reserves the right to cancel, reschedule, or modify events, including changing format or venue, without liability.
+4.3 No-show
+Failure to attend shall be treated as a no-show and shall not entitle the participant to any refund or credit.
+4.4 Force Majeure Cancellation
+In case of force majeure, BME may offer credits at its discretion but shall not be obligated to provide refunds.
