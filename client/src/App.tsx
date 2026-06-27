@@ -37,10 +37,13 @@ import AdminCirculars from "@/pages/admin/AdminCirculars";
 import AdminGallery from "@/pages/admin/AdminGallery";
 import AdminTeam from "@/pages/admin/AdminTeam";
 import AdminMemberships from "@/pages/admin/AdminMemberships";
-import AdminHeroSlides from "@/pages/admin/AdminHeroSlides";
-import NewsDetail from "@/pages/NewsDetail";
-import EventDetail from "@/pages/EventDetail";
-import CircularDetail from "@/pages/CircularDetail";
+import AdminHeroSlides from "./pages/admin/AdminHeroSlides";
+import AdminBlogs from "./pages/admin/AdminBlogs";
+import NewsDetail from "./pages/NewsDetail";
+import EventDetail from "./pages/EventDetail";
+import CircularDetail from "./pages/CircularDetail";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 function ProtectedAdmin({ component: Component }: { component: React.ComponentType }) {
   const [, navigate] = useLocation();
@@ -75,6 +78,7 @@ function Router() {
         <Route path="/admin/circulars"     component={() => <ProtectedAdmin component={AdminCirculars} />} />
         <Route path="/admin/gallery"       component={() => <ProtectedAdmin component={AdminGallery} />} />
         <Route path="/admin/team"          component={() => <ProtectedAdmin component={AdminTeam} />} />
+        <Route path="/admin/blogs"         component={() => <ProtectedAdmin component={AdminBlogs} />} />
         <Route path="/admin/memberships"   component={() => <ProtectedAdmin component={AdminMemberships} />} />
         <Route path="/admin/hero-slides"   component={() => <ProtectedAdmin component={AdminHeroSlides} />} />
         <Route component={NotFound} />
@@ -100,6 +104,8 @@ function Router() {
         <Route path="/circulars"          component={Circulars} />
         <Route path="/circulars/:id"      component={CircularDetail} />
         <Route path="/news/:id"           component={NewsDetail} />
+        <Route path="/blog"               component={Blog} />
+        <Route path="/blog/:id"           component={BlogDetail} />
         <Route path="/gallery"            component={Gallery} />
         <Route path="/membership"         component={Membership} />
         <Route path="/membership/apply"   component={MembershipApply} />

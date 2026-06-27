@@ -31,6 +31,18 @@ export const announcements = pgTable("announcements", {
   date: timestamp("date").defaultNow(),
 });
 
+export const blogs = pgTable("blogs", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  metaHeading: text("meta_heading").notNull(),
+  metaDescription: text("meta_description").notNull(),
+  description: text("description").notNull(),
+  content: text("content").notNull(),
+  imageUrl: text("image_url").notNull(),
+  publishedAt: timestamp("published_at").defaultNow(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const events = pgTable("events", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
@@ -118,6 +130,7 @@ export const admins = pgTable("admins", {
 export const insertHeroSlideSchema = createInsertSchema(heroSlides).omit({ id: true, createdAt: true });
 export const insertInquirySchema = createInsertSchema(inquiries).omit({ id: true, createdAt: true });
 export const insertAnnouncementSchema = createInsertSchema(announcements).omit({ id: true, date: true });
+export const insertBlogSchema = createInsertSchema(blogs).omit({ id: true, createdAt: true, publishedAt: true });
 export const insertEventSchema = createInsertSchema(events).omit({ id: true, createdAt: true });
 export const insertTeamSchema = createInsertSchema(team).omit({ id: true });
 export const insertCircularSchema = createInsertSchema(circulars).omit({ id: true, date: true });
@@ -127,9 +140,11 @@ export const insertMembershipSchema = createInsertSchema(memberships).omit({ id:
 
 export type Inquiry = typeof inquiries.$inferSelect;
 export type InsertInquiry = z.infer<typeof insertInquirySchema>;
+export type InsertBlog = z.infer<typeof insertBlogSchema>;
 export type HeroSlide = typeof heroSlides.$inferSelect;
 export type InsertHeroSlide = z.infer<typeof insertHeroSlideSchema>;
 export type Announcement = typeof announcements.$inferSelect;
+export type Blog = typeof blogs.$inferSelect;
 export type InsertAnnouncement = z.infer<typeof insertAnnouncementSchema>;
 export type Event = typeof events.$inferSelect;
 export type TeamMember = typeof team.$inferSelect;

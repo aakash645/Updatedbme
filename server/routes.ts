@@ -44,6 +44,18 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
         await storage.createAnnouncement({ title: "BME App Launching Soon", content: "We are excited to announce the upcoming launch of our new BME Mobile App. Stay tuned." });
         await storage.createAnnouncement({ title: "Benchmark Prices Updated", content: "Latest benchmark prices for Copper and Zinc have been released and circulated to members." });
       }
+      const blogs = await storage.getBlogs();
+      if (blogs.length === 0) {
+        await storage.createBlog({
+          title: "Strengthening India's Non-Ferrous Metals Network",
+          metaHeading: "Industry Leadership & Member Growth",
+          metaDescription: "Learn how BME is helping members connect, comply, and grow across the non-ferrous metals sector.",
+          description: "An overview of new member services, policy advocacy, and marketplace intelligence being introduced by BME.",
+          content: "BME is continuing its mission with new digital services, events, and regulatory support for members across copper, zinc, aluminum, and specialty metals. Our focus remains on delivering actionable insights, improved networking, and policy representation at both central and state levels. Members can expect expanded training programs, market reports, and a stronger voice in commodity pricing discussions.",
+          imageUrl: "/bme1_1773052578105.jpeg",
+          publishedAt: new Date(),
+        });
+      }
       const slides = await storage.getHeroSlides();
       if (slides.length === 0) {
         await storage.createHeroSlide({ title: "The Apex Body of", highlight: "Non-Ferrous Metals", description: "Representing a vast spectrum of the trade and industry. A legacy of excellence powering the national economy with over 800+ active members across India.", imageUrl: "/bme1_1773052578105.jpeg", order: 0, active: true });
@@ -66,6 +78,13 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
   });
 
   app.get(api.announcements.list.path, async (_req, res) => { res.json(await storage.getAnnouncements()); });
+  app.get(api.blogs.list.path, async (_req, res) => { res.json(await storage.getBlogs()); });
+  app.get(api.blogs.detail.path, async (req, res) => {
+    const id = Number(req.params.id);
+    const blog = await storage.getBlogById(id);
+    if (!blog) return res.status(404).json({ message: "Not found" });
+    res.json(blog);
+  });
   app.get(api.events.list.path,        async (_req, res) => { res.json(await storage.getEvents()); });
   app.get(api.team.list.path,          async (_req, res) => { res.json(await storage.getTeam()); });
   app.get(api.circulars.list.path,     async (_req, res) => { res.json(await storage.getCirculars()); });
@@ -208,6 +227,41 @@ Return ONLY the JSON object. No markdown fences, no explanation, no extra text.`
   });
   app.delete("/api/admin/announcements/:id", requireAdmin, async (req, res) => {
     await storage.deleteAnnouncement(Number(req.params.id));
+    res.json({ message: "Deleted" });
+  });
+
+  // ── ADMIN — BLOGS ─────────────────────────────────────────────────────────
+  app.get("/api/admin/blogs", requireAdmin, async (_req, res) => {
+    res.json(await storage.getBlogs());
+  });
+  app.post("/api/admin/blogs", requireAdmin, async (req, res) => {
+    try {
+      const publishedAtRaw = req.body.publishedAt;
+      const publishedAt = publishedAtRaw ? new Date(publishedAtRaw) : undefined;
+      if (publishedAtRaw && publishedAt && Number.isNaN(publishedAt.getTime())) {
+        throw new Error("Invalid publishedAt value");
+      }
+      res.status(201).json(await storage.createBlog({
+        ...req.body,
+        ...(publishedAtRaw ? { publishedAt } : {}),
+      }));
+    } catch (e: any) { res.status(400).json({ message: e.message }); }
+  });
+  app.put("/api/admin/blogs/:id", requireAdmin, async (req, res) => {
+    try {
+      const publishedAtRaw = req.body.publishedAt;
+      const publishedAt = publishedAtRaw ? new Date(publishedAtRaw) : undefined;
+      if (publishedAtRaw && publishedAt && Number.isNaN(publishedAt.getTime())) {
+        throw new Error("Invalid publishedAt value");
+      }
+      res.json(await storage.updateBlog(Number(req.params.id), {
+        ...req.body,
+        ...(publishedAtRaw ? { publishedAt } : {}),
+      }));
+    } catch (e: any) { res.status(400).json({ message: e.message }); }
+  });
+  app.delete("/api/admin/blogs/:id", requireAdmin, async (req, res) => {
+    await storage.deleteBlog(Number(req.params.id));
     res.json({ message: "Deleted" });
   });
 

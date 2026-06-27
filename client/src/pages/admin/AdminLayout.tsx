@@ -2,7 +2,7 @@ import { useLocation, Link } from "wouter";
 import { useAdminAuth } from "@/hooks/use-admin";
 import {
   LayoutDashboard, Megaphone, CalendarDays, FileText,
-  Images, Users, ClipboardList, LogOut, ExternalLink, ChevronRight, Layers
+  Images, Users, ClipboardList, LogOut, ExternalLink, ChevronRight, Layers, BookOpen
 } from "lucide-react";
 import bmeLogoPath from "@assets/Copper_finish_logo_-_No_BG_1772884011587.png";
 
@@ -13,6 +13,7 @@ const navItems = [
   { href: "/admin/events", label: "Events & Exhibitions", icon: CalendarDays },
   { href: "/admin/circulars", label: "Circulars & Notices", icon: FileText },
   { href: "/admin/gallery", label: "Gallery", icon: Images },
+  { href: "/admin/blogs", label: "Blogs", icon: BookOpen },
   { href: "/admin/team", label: "Directors & Team", icon: Users },
   { href: "/admin/memberships", label: "Memberships", icon: ClipboardList },
 ];

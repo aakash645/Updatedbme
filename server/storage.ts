@@ -1,10 +1,10 @@
 import { db } from "./db";
 import {
-  inquiries, announcements, events, team, circulars, gallery,
+  inquiries, announcements, events, team, circulars, gallery, blogs,
   galleryAlbums, memberships, admins, heroSlides,
   type InsertInquiry, type InquiryResponse, type AnnouncementResponse,
   type Event, type TeamMember, type Circular, type GalleryItem,
-  type GalleryAlbum, type Membership, type Admin, type HeroSlide,
+  type Blog, type GalleryAlbum, type Membership, type Admin, type HeroSlide,
 } from "@shared/schema";
 import { desc, eq } from "drizzle-orm";
 
@@ -82,6 +82,24 @@ export class DatabaseStorage {
   }
   async deleteCircular(id: number): Promise<void> {
     await db.delete(circulars).where(eq(circulars.id, id));
+  }
+  async getBlogs(): Promise<Blog[]> {
+    return db.select().from(blogs).orderBy(desc(blogs.publishedAt));
+  }
+  async getBlogById(id: number): Promise<Blog | undefined> {
+    const [r] = await db.select().from(blogs).where(eq(blogs.id, id));
+    return r;
+  }
+  async createBlog(data: Omit<Blog, "id" | "createdAt"> & Partial<Pick<Blog, "publishedAt">>): Promise<Blog> {
+    const [r] = await db.insert(blogs).values(data).returning();
+    return r;
+  }
+  async updateBlog(id: number, data: Partial<Blog>): Promise<Blog> {
+    const [r] = await db.update(blogs).set(data).where(eq(blogs.id, id)).returning();
+    return r;
+  }
+  async deleteBlog(id: number): Promise<void> {
+    await db.delete(blogs).where(eq(blogs.id, id));
   }
   async getGalleryItems(): Promise<GalleryItem[]> {
     return db.select().from(gallery).orderBy(desc(gallery.createdAt));

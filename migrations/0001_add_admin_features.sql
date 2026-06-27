@@ -62,6 +62,19 @@ CREATE TABLE IF NOT EXISTS hero_slides (
   created_at TIMESTAMP DEFAULT NOW()
 );
 
+-- Blogs table
+CREATE TABLE IF NOT EXISTS blogs (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  meta_heading TEXT NOT NULL,
+  meta_description TEXT NOT NULL,
+  description TEXT NOT NULL,
+  content TEXT NOT NULL,
+  image_url TEXT NOT NULL,
+  published_at TIMESTAMP DEFAULT NOW(),
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
 -- Add content field to events table for detail page
 ALTER TABLE events ADD COLUMN IF NOT EXISTS content TEXT;
 

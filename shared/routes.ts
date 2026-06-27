@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertInquirySchema, inquiries, announcements, events, team, circulars, gallery } from './schema';
+import { insertInquirySchema, inquiries, announcements, events, team, circulars, gallery, blogs } from './schema';
 
 export const errorSchemas = {
   validation: z.object({
@@ -56,6 +56,22 @@ export const api = {
       path: '/api/circulars' as const,
       responses: {
         200: z.array(z.custom<typeof circulars.$inferSelect>()),
+      },
+    },
+  },
+  blogs: {
+    list: {
+      method: 'GET' as const,
+      path: '/api/blogs' as const,
+      responses: {
+        200: z.array(z.custom<typeof blogs.$inferSelect>()),
+      },
+    },
+    detail: {
+      method: 'GET' as const,
+      path: '/api/blogs/:id' as const,
+      responses: {
+        200: z.custom<typeof blogs.$inferSelect>(),
       },
     },
   },
