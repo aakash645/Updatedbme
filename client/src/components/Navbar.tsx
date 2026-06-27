@@ -18,14 +18,15 @@ const navLinks = [
     name: "Activities",
     children: [
       { name: "Events & Exhibitions", href: "/events" },
-      { name: "Annual Conclave", href: "/conclave" },
+      // { name: "Annual Conclave", href: "/conclave" },
       { name: "Circulars & Notices", href: "/circulars" },
       { name: "Gallery", href: "/gallery" },
     ],
   },
-  { name: "Conclave 2027", href: "/conclave2027" },
+  // { name: "Conclave 2027", href: "/conclave2027" },
   { name: "Products", href: "/products" },
   { name: "Knowledge Hub", href: "/knowledge" },
+  { name: "Blog", href: "/blog" },
   { name: "Membership", href: "/membership" },
   { name: "Contact", href: "/contact" },
 ];
