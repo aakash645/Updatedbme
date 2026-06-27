@@ -28,7 +28,7 @@ export default function Contact() {
                     <div>
                       <h4 className="font-bold text-lg text-foreground mb-1">Address</h4>
                       <p className="text-muted-foreground font-medium">
-                        Bombay Metal Exchange Ltd.<br />
+                        Bharat Metal Exchange Ltd.<br />
                         BME House, 88/90, 1st Floor,<br />
                         Kika Street, Gulalwadi,<br />
                         Mumbai - 400 004, Maharashtra, India
