@@ -30,8 +30,8 @@ const STATES_LIST  = [
   "West Bengal","Delhi","Chhattisgarh","Jharkhand","Odisha","Other",
 ];
 const MEM_TYPES = [
-  { id: "Annual", label: "Annual Membership",  base: 5000,  entrance: 10000 },
-  { id: "Life",   label: "Life Membership",    base: 60000, entrance: 10000 },
+  { id: "Annual", label: "Annual Membership",  base: 10000,  entrance: 15000 },
+  { id: "Life",   label: "Life Membership",    base: 100000, entrance: 0 },
 ];
 const DOCS = [
   { id:"d1", name:"Duly filled membership form",       note:"This form, signed with official rubber stamp",                          req:true  },
